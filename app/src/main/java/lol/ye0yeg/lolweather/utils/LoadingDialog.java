@@ -19,7 +19,7 @@ public class LoadingDialog {
     //制作自定义LoadingDialog！！
     public static Dialog showDialogForLoading(Context context) {
         View view = LayoutInflater.from(context).inflate(R.layout.dialog_loading, null);
-        TextView tv_loading = view.findViewById(R.id.id_tv_loading_dialog_text);
+        TextView tv_loading = (TextView) view.findViewById(R.id.id_tv_loading_dialog_text);
         tv_loading.setText("Loading...");
         mLoadingDialog = new Dialog(context, R.style.CustomProgressDialog);
         mLoadingDialog.setCancelable(true);
@@ -34,7 +34,7 @@ public class LoadingDialog {
 
     public static Dialog showDialogForLoading(Context context,String str, boolean cancleable){
         View view = LayoutInflater.from(context).inflate(R.layout.dialog_loading,null);
-        TextView tv_loading = view.findViewById(R.id.id_tv_loading_dialog_text);
+        TextView tv_loading = (TextView) view.findViewById(R.id.id_tv_loading_dialog_text);
         tv_loading.setText(str);
         mLoadingDialog = new Dialog(context, R.style.CustomProgressDialog);
         mLoadingDialog.setCancelable(cancleable);

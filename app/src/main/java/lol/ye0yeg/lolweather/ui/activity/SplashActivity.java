@@ -1,5 +1,6 @@
 package lol.ye0yeg.lolweather.ui.activity;
 
+import android.content.Intent;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
@@ -59,6 +60,8 @@ public class SplashActivity extends BaseActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 stopLoadingDialog();
+                startActivity(new Intent(SplashActivity.this,MainActivity.class));
+                finish();
             }
 
             @Override
