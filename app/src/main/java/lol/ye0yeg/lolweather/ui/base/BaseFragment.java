@@ -17,7 +17,7 @@ import lol.ye0yeg.lolweather.utils.ToastUtils;
  */
 public abstract class BaseFragment<T extends BasePresenter, E extends BaseModel> extends Fragment {
     public T mPresenter;
-    public E mBaseModel;
+    public E mModel;
     protected View mRootView;
 
     @Nullable
@@ -28,7 +28,7 @@ public abstract class BaseFragment<T extends BasePresenter, E extends BaseModel>
         }
         ButterKnife.bind(this, mRootView);
         mPresenter = TUtils.getT(this, 0);
-        mBaseModel = TUtils.getT(this, 1);
+        mModel = TUtils.getT(this, 1);
         if (mPresenter != null) {
             mPresenter.mContext = this.getActivity();
         }
